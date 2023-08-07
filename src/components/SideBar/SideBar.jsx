@@ -85,7 +85,7 @@ const SideBar = ({ setMode, mode }) => {
               <ListItemIcon>
                 {/* CHANGE THE LIGHT ICON TO DARK UPON SWITCHING MODES */}
                 {
-                  mode === "light" ? <WbSunnyIcon /> : < DarkModeIcon />
+                  mode === "light" ? < DarkModeIcon /> : <WbSunnyIcon />
                 }
               </ListItemIcon>
               {/* DARK OR LIGHT MODE SWITCHER */}
