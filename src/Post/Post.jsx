@@ -9,7 +9,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const Post = () => {
 
   return (
-    <Card >
+    <Card sx={{ marginBottom: 5 }} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="cute cat">
@@ -40,7 +40,6 @@ const Post = () => {
         <IconButton aria-label="add to favorites">
           <Checkbox icon={<FavoriteBorderIcon />} checkedIcon={<FavoriteIcon sx={{ color: "red" }} />} />
         </IconButton>
-
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>

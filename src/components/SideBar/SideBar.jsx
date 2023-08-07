@@ -7,8 +7,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
-const SideBar = () => {
+const SideBar = ({ setMode, mode }) => {
 
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
@@ -77,13 +78,18 @@ const SideBar = () => {
               <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
-          {/* DARK MODE SWITCH */}
+
+          {/* DARK MODE OR LIGHT MODE ICONS AND SWITCH */}
           <ListItem disablePadding>
             <ListItemButton component="a" href="#switch">
               <ListItemIcon>
-                <DarkModeIcon />
+                {/* CHANGE THE LIGHT ICON TO DARK UPON SWITCHING MODES */}
+                {
+                  mode === "light" ? <WbSunnyIcon /> : < DarkModeIcon />
+                }
               </ListItemIcon>
-              <Switch />
+              {/* DARK OR LIGHT MODE SWITCHER */}
+              <Switch onChange={() => setMode(mode === "light" ? "dark" : "light")} />
             </ListItemButton>
           </ListItem>
         </List>
